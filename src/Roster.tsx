@@ -1,5 +1,4 @@
 import { observer } from 'mobx-react';
-import React from 'react';
 import Athlete from './Athlete';
 import './App.css';
 
@@ -13,11 +12,11 @@ function Roster() {
 				<th>Name</th>
 				<th>Age</th>
 			</tr>
-			{[lebronJames, stephCurry].map((athlete) => {
+			{[lebronJames, stephCurry].map((Athlete) => {
 				return (
-					<tr key={athlete.name}>
-						<td>{athlete.name}</td>
-						<td>{athlete.age}</td>
+					<tr key={Athlete.name}>
+						<td>{Athlete.name}</td>
+						<td>{Athlete.age}</td>
 					</tr>
 				);
 			})}

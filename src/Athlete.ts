@@ -10,8 +10,17 @@ class Athlete {
 		this.age = age;
 		this.teamHistory = [];
 
-		makeObservable(this, { name: true, age: true, teamHistory: true });
+		makeObservable(this, {
+			wishHappyBirthday: true,
+			name: true,
+			age: true,
+			teamHistory: true,
+		});
 	}
+
+	wishHappyBirthday = () => {
+		this.age++;
+	};
 }
 
 export default Athlete;
