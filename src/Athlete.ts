@@ -20,7 +20,6 @@ class Athlete {
 	}
 
 	wishHappyBirthday = () => {
-		//console.log(`Happy Birthday ${this.name}!`);
 		this.age++;
 	};
 
