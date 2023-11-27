@@ -15,7 +15,7 @@ function MoneyForm() {
 			}}
 		>
 			<h1 style={{ marginBottom: 0 }}>Money Talks</h1>
-			<p>Total: {total}</p>
+			<p className="total-p">Total: {total}</p>
 			<input
 				type="number"
 				placeholder="Years"
