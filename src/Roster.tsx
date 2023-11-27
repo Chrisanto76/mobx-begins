@@ -11,12 +11,24 @@ function Roster() {
 			<tr>
 				<th>Name</th>
 				<th>Age</th>
+				<th>Teams</th>
+				<th>Is it their birthday ?</th>
 			</tr>
-			{[lebronJames, stephCurry].map((Athlete) => {
+			{[lebronJames, stephCurry].map((athlete) => {
 				return (
-					<tr key={Athlete.name}>
-						<td>{Athlete.name}</td>
-						<td>{Athlete.age}</td>
+					<tr key={athlete.name}>
+						<td>{athlete.name}</td>
+						<td>{athlete.age}</td>
+						<td>{athlete.teamHistory}</td>
+						<td>
+							<button
+								type="button"
+								style={{ width: '100%' }}
+								onClick={() => athlete.wishHappyBirthday()}
+							>
+								whish happy birthday
+							</button>
+						</td>
 					</tr>
 				);
 			})}
