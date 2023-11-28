@@ -18,7 +18,7 @@ function TradeForm({ athlete }: TradeFormProps) {
 			/>
 			<span>
 				<button type="button" onClick={() => athlete.tradePlayer(teamName)}>
-					trade
+					Trade
 				</button>
 			</span>
 		</>
