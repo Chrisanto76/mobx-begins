@@ -1,9 +1,10 @@
 import { makeAutoObservable } from 'mobx';
 import Athlete from './Athlete';
-import React from 'react';
+import React, { useRef } from 'react';
 
 export default class TeamStore {
-	constructor() {
+	constructor(players: Athlete[]) {
+		this.players = players;
 		makeAutoObservable(this);
 	}
 
@@ -47,10 +48,9 @@ type Props = {
 };
 
 export function TeamStoreProvider({ children, players }: Props) {
-	const store = new TeamStore();
-	store.players = players;
+	const store = useRef(new TeamStore(players));
 	return (
-		<TeamStoreContext.Provider value={store}>
+		<TeamStoreContext.Provider value={store.current}>
 			{children}
 		</TeamStoreContext.Provider>
 	);
