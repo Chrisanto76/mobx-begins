@@ -24,7 +24,7 @@ export default class TeamStore {
 	};
 
 	get teamName(): string {
-		return this.state + this.mascot;
+		return `${this.state} ${this.mascot}`;
 	}
 
 	get totalYearlyCost(): number {
