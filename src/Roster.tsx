@@ -14,6 +14,7 @@ function Roster() {
 					<th>Teams</th>
 					<th>Trade form</th>
 					<th>Is it their birthday ?</th>
+					<th>Salary</th>
 				</tr>
 				{players.map((athlete) => {
 					return (
@@ -33,6 +34,7 @@ function Roster() {
 									whish happy birthday
 								</button>
 							</td>
+							<td>{athlete.salary}</td>
 						</tr>
 					);
 				})}

@@ -19,6 +19,9 @@ export default class TeamStore {
 	};
 
 	players: Athlete[] = [];
+	setPlayers = (players: Athlete[]) => {
+		this.players = players;
+	};
 
 	get teamName(): string {
 		return this.state + this.mascot;
@@ -31,9 +34,9 @@ export default class TeamStore {
 		);
 	}
 
-	addPlayer(player: Athlete) {
+	addPlayer = (player: Athlete) => {
 		this.players.push(player);
-	}
+	};
 }
 
 const TeamStoreContext = React.createContext<TeamStore>(

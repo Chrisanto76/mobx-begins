@@ -26,8 +26,8 @@ class Athlete {
 		this.age++;
 	};
 
-	tradePlayer = (newTeam: string) => {
-		this.teamHistory.push(newTeam);
+	tradePlayer = (team: string) => {
+		this.teamHistory.push(team);
 	};
 }
 
