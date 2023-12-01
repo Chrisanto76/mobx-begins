@@ -63,7 +63,7 @@ function MoneyForm() {
 			/>
 			<button
 				type="button"
-				onClick={action((e) => {
+				onClick={action(() => {
 					addPlayer(
 						new Athlete(formState.name, formState.years, formState.salary)
 					);
